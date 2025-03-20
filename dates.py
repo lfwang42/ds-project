@@ -4,10 +4,10 @@ import json
 import pandas
 from datetime import datetime
 
-cases = pandas.read_csv('out.csv')
+cases = pandas.read_csv('new_out.csv')
 new_cases = cases.copy(deep=True)
 k = 0
-cases['File Number'] = [''] * 3130
+cases['File Number'] = [''] * 847
 df = pandas.read_excel('2010.xlsx')
 file_numbers = set(df['File Number'].values)
 for i, case in cases.iterrows():
@@ -24,7 +24,11 @@ for i, case in cases.iterrows():
     # print(temp[-1].strftime('%Y-%m-%d'))
     for line in text.split("\n"):
         if 'File Number: ' in line:
-            new_cases.loc[i, 'File Number'] = line.split(':')[1].strip()
+            file_num = line.split(':')[-1].strip()
+            if file_num[0] != 'L' and file_num[0] != 'E':
+                file_num = line.split(':')[1].strip()
+            new_cases.loc[i, 'File Number'] = file_num
+
 
     # print(new_cases.loc[i, 'File Number'])
     # if new_cases.loc[i, 'File Number'] in file_numbers:
@@ -42,5 +46,5 @@ print(len(new_cases))
 new_cases = new_cases[(new_cases['Decision Date'] > '2009-01-01') & (new_cases['Decision Date'] < '2025-05-01')]
 print('after: ')
 print(len(new_cases))
-new_cases.to_csv('new_data.csv')
+new_cases.to_csv('new_data_2.csv')
 print(df.columns)

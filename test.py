@@ -14,7 +14,7 @@ driver = webdriver.Chrome()
 
 #go to search results
 # Navigate to the URL
-driver.get('https://www.canlii.org/#search/type=decision&ccType=tribunals&startDate=2010-01-01&endDate=2025-12-31&sort=decisionDateAsc&text=landlord%20ottawa%20K%20-k9%20-k7%20-k8%20-k6&id=LTB-L&searchId=2025-03-18T20%3A54%3A52%3A242%2Fbf03193ffe1647f29ec3859cd2e6ffb2')
+driver.get('https://www.canlii.org/#search/type=decision&ccType=tribunals&startDate=2010-01-01&endDate=2025-12-31&sort=decisionDateAsc&text=ottawa%20K%20-k9%20-k7%20-k8%20-k6&id=LTB-T&searchId=2025-03-19T17%3A58%3A53%3A392%2F34de77dc924f4354bd0f81ba44703290')
 
 #smaller
 # driver.get('https://www.canlii.org/en/on/onltb/#search/type=decision&ccId=onltb&startDate=2022-02-01&endDate=2025-12-31&sort=decisionDateDesc&text=landlord%20ottawa&id=EAL-&searchId=2025-03-14T19%3A09%3A51%3A011%2F286c111e180845fd943ff2cba82a1c34&origType=decision&origCcId=onltb')
