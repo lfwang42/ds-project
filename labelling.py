@@ -56,7 +56,7 @@ for k in textmap:
         for i in range(len(text_labels)):
             if text_labels[i] in completion.choices[0].message.content:
                 # print('true')
-                labels[i] = 1
+                labels[i] = 1['Tenant-Caused Damage', 'Tenant-Nonpayment', "Landlord's failure to maintain", 'Tenant caused serious problems', 'Tenant Illegal Activity', 'Landlord Family Moving in', 'Landlord Wants to Demolish or Convert Unit', 'Landlord Bad Faith Termination', 'Landlord Rent Increase', 'Other']
 
 
         # time.sleep(1)
